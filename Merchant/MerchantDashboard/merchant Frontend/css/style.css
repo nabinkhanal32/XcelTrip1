@@ -1,0 +1,53 @@
+input[type=text],
+input[type=password],
+input[type=file] {
+  width: 30%;
+  padding: 12px 20px;
+  margin: 10px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+
+.loginForm {
+  margin-left: 120px;
+}
+.company{
+    margin-left: 120px;
+  } 
+
+.button {
+  background-color: #Bbbbbb;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 10%;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+.H3 {
+
+ background-color: aqua;
+}
+.companyDetails{
+  margin-left: 10%;
+  flex: 0 0 40%;
+
+}
+.contactDetails{
+  height: 20px;
+  width: 900px;
+
+}
+#wrapper {
+  display: flex;
+}
+#apikey{
+  width: 320px;
+}

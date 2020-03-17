@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>XcelService</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/style (2).css" />
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css" />
+    <script src="../../javascript/url.js"></script>
+    <script src="js/getmerchantTopup.js"></script>
+  </head>
+
+  <body class="is-preload">
+    <!-- Header -->
+    <header id="header">
+      <a class="logo" href="index.html">Xcel Services</a>
+      <nav>
+        <a href="#menu">Features</a>
+      </nav>
+    </header>
+    <!-- Nav -->
+    <nav id="menu">
+      <ul class="links">
+        <li><a href="profile.html">profile</a></li>
+        <li><a href="./Services/index.html">GiftCards</a></li>
+        <li><a href="changepassword.html">Change Password</a></li>
+
+        <li>
+          <a href="" id="logout"
+            ><script>
+              document.write("logout");
+              const logout = document.getElementById("logout");
+              logout.addEventListener("click", function() {
+                localStorage.removeItem("company_id");
+                localStorage.removeItem("token_merchant");
+                window.location.href = "../../index.html";
+              });
+            </script></a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <section class="wrapper">
+      <div class="inner">
+        <header class="special">
+          <h2>Merchant DASHBOARD</h2>
+        </header>
+      </div>
+    </section>
+
+    <!-- ------Table -->
+    <div class="inner">
+      <!-- Latest Product End -->
+      <h3 class="H3">Deposite History</h3>
+      <table id="depositeHistory" class="table table-bordered table-responsive-lg">
+        <thead class="dash-box dash-box-color-3">
+          <tr>
+            <th>ID</th>
+            <th>Date</th>
+            <th>Total_Amount</th>
+            <th>Mode Of Payment</th>
+            <th>remarks</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <h3 class="H3">Account Statement</h3>
+      <table id="account" class="table table-bordered table-responsive-lg">
+        <thead class="dash-box dash-box-color-3">
+          <tr>
+            <th>ID</th>
+            <th>Date</th>
+            <th>Mode Of Payment</th>
+            <th>Amount</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <h3 class="H3">Sales History</h3>
+      <table id="sales" class="table table-bordered table-responsive-lg">
+        <thead class="dash-box dash-box-color-3">
+          <tr>
+            <th>Product ID</th>
+            <th>Amount</th>
+            <th>Date</th>
+            <th>Details</th>
+            <th>Quality</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <!--Data tables -->
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $("#merchantlist").DataTable();
+      });
+    </script>
+    <script>
+      $(document).ready(function() {
+        $("#sales").DataTable();
+      });
+    </script>
+    <script>
+      $(document).ready(function() {
+        $("#account").DataTable();
+      });
+    </script>
+    <script>
+      function removeproduct(id) {
+        $.ajax({
+          url: "http://localhost:8000/removeProduct/" + id,
+          type: "DELETE",
+
+          success: function(res, textStatus, xhr) {
+            if (res.message == "succesfully removed") {
+              alert(res.message);
+              location.reload();
+            }
+          },
+          error: function(xhr, textStatus, errorThrown) {
+            console.log("Error in Operation");
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

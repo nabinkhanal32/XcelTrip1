@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>XcelService Admin</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="../../vendors/mdi/css/materialdesignicons.min.css" />
+    <link rel="stylesheet" href="../../vendors/base/vendor.bundle.base.css" />
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <link rel="stylesheet" href="../../vendors/datatables.net-bs4/dataTables.bootstrap4.css" />
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="../../css/style.css" />
+    <!-- endinject -->
+  </head>
+  <body>
+    <div class="container-scroller">
+      <!-- partial:partials/_navbar.html -->
+      <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+        <div class="navbar-brand-wrapper d-flex justify-content-center">
+          <div
+            class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100"
+          >
+            <a class="navbar-brand brand-logo" href="../../index.html"
+              ><img src="../../images/logo.png" alt="logo"
+            /></a>
+
+            <button
+              class="navbar-toggler navbar-toggler align-self-center"
+              type="button"
+              data-toggle="minimize"
+            >
+              <span class="mdi mdi-sort-variant"></span>
+            </button>
+          </div>
+        </div>
+
+          <button
+            class="navbar-toggler navbar-toggler-right d-lg-none align-self-center"
+            type="button"
+            data-toggle="offcanvas"
+          >
+            <span class="mdi mdi-menu"></span>
+          </button>
+        </div>
+      </nav>
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial:partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="../../index.html">
+                <i class="mdi mdi-home menu-icon"></i>
+                <span class="menu-title">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../Merchant Details/merchant.html">
+                <i class="mdi mdi-account-multiple"></i>
+                <span class="menu-title">Merchent Details</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="topup.html">
+                <i class="mdi mdi-buffer
+                "></i>
+                <span class="menu-title">Topup Details</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../Product/addproduct.html">
+                <i class="mdi mdi-briefcase-upload"></i>
+                <span class="menu-title">Add Product</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../Product/product.html">
+                <i class="mdi mdi-view-module"></i>
+                <span class="menu-title">Product</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">
+                <i class="mdi mdi-logout"></i>
+                <span class="menu-title">Logout</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- partial -->
+        <div class="main-panel">
+          <div class="content-wrapper">
+            <div class="row">
+              <div class="col-md-12 grid-margin">
+                <div class="d-flex justify-content-between flex-wrap">
+                  <div class="d-flex align-items-end flex-wrap">
+                    <div class="mr-md-3 mr-xl-5">
+                      <h2>Welcome back,</h2>
+                      <p class="mb-md-0">Your analytics dashboard template.</p>
+                    </div>
+                    <div class="d-flex">
+                      <i class="mdi mdi-home text-muted hover-cursor"></i>
+                      <p class="text-muted mb-0 hover-cursor">
+                        &nbsp;/&nbsp;Dashboard&nbsp;/&nbsp;
+                      </p>
+                      <p class="text-primary mb-0 hover-cursor">Analytics</p>
+                    </div>
+                  </div>
+               
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body dashboard-tabs p-0">
+                    <ul class="nav nav-tabs px-4" role="tablist">
+                      <li class="nav-item">
+                        <a
+                          class="nav-link active"
+                          id="overview-tab"
+                          data-toggle="tab"
+                          href="#overview"
+                          role="tab"
+                          aria-controls="overview"
+                          aria-selected="true"
+                          >Overview</a
+                        >
+                      </li>
+                          
+                      </li>
+                    </ul>
+                  
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-primary btn-rounded btn-fw" onclick="window.location.href='addtopup.html'">
+              Add Topup
+            </button>
+            <br />
+            <div class="row">
+              <div class="col-md-12 stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <p class="card-title">Topup Details</p>
+                    <div class="table-responsive">
+                      <table id="Topup" class="table table-bordered table-responsive-lg">
+                        <thead class="dash-box dash-box-color-3">
+                          <tr>
+                            <th>ID</th>
+                            <th>Date</th>
+                            <th>Topup Amount</th>
+                            <th>Mode of Payment</th>
+                            <th>Company Name</th>
+                            <th>Remarks</th>
+                          </tr>
+                        </thead>
+                        <tbody></tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+           
+          <!-- content-wrapper ends -->
+          <!-- partial:partials/_footer.html -->
+         
+          <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+
+    <!-- plugins:js -->
+    <script src="../../vendors/base/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page-->
+    <script src="../../vendors/chart.js/Chart.min.js"></script>
+    <script src="../../vendors/datatables.net/jquery.dataTables.js"></script>
+    <script src="../../vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+    <script src="../../js/dashboard/dashboard.js"></script>
+    <script src="../../js/dashboard/off-canvas.js"></script>
+
+    <script src="../../js/url.js"></script>
+
+    <script src="../../js/getAllTopup.js"></script>
+    <!-- End plugin js for this page-->
+    <script>
+      $(document).ready(function() {
+        $("#Topup").DataTable();
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>XcelServices</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="OneTech shop project" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css" />
+    <link
+      href="plugins/fontawesome-free-5.0.1/css/fontawesome-all.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css"
+    />
+    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css" />
+    <link rel="stylesheet" type="text/css" href="plugins/slick-1.8.0/slick.css" />
+    <link rel="stylesheet" type="text/css" href="styles/main_styles.css" />
+	<link rel="stylesheet" type="text/css" href="styles/responsive.css" />
+	<script src="./javascript/getAllProduct.js"></script>
+	<script src="./javascript/url.js"></script>
+
+  </head>
+
+  <body>
+    <div class="super_container">
+      <!-- Header -->
+
+      <header class="header">
+        <!-- Top Bar -->
+
+        <div class="top_bar">
+          <div class="container">
+            <div class="row">
+              <div class="col d-flex flex-row">
+                <div class="top_bar_contact_item">
+                  <div class="top_bar_icon"><img src="images/phone.png" alt="" /></div>
+                  +38 068 005 3570
+                </div>
+                <div class="top_bar_contact_item">
+                  <div class="top_bar_icon"><img src="images/mail.png" alt="" /></div>
+                  <a href="mailto:fastsales@gmail.com">fastsales@gmail.com</a>
+                </div>
+                <div class="top_bar_content ml-auto">
+                  
+                  <div class="top_bar_user">
+                    <div class="user_icon"><img src="images/user.svg" alt="" /></div>
+                    <div><a href="./MerchantDashboard/merchant Frontend/index.html">Dashboard</a></div>
+                    <div><a href="login.html">Sign in</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Header Main -->
+
+        <div class="header_main">
+          <div class="container">
+            <div class="row">
+              <!-- Logo -->
+              <div class="col-lg-2 col-sm-3 col-3 order-1">
+                <div class="logo_container">
+                  <div class="logo">
+                    <a href="#"
+                      ><img src="./images/logo.png" alt="" height="100px" width="100px"
+                    /></a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Search -->
+              <div class="col-lg-6 col-12 order-lg-2 order-3 text-lg-left text-right">
+                <div class="header_search">
+                  <div class="header_search_content">
+                    <div class="header_search_form_container">
+                      <form action="#" class="header_search_form clearfix">
+                        <input
+                          type="search"
+                          required="required"
+                          class="header_search_input"
+                          placeholder="Search for products..."
+                        />
+                        <div class="custom_dropdown">
+                          <div class="custom_dropdown_list">
+                            <span class="custom_dropdown_placeholder clc">Select Country</span>
+                            <i class="fas fa-chevron-down"></i>
+                            <select class="custom_list clc" id="country">
+                              <option value="international">International 🌐</option
+                              ><option value="afghanistan">Afghanistan 🇦🇫</option
+                              ><option value="aland-islands">Aland Islands 🇦🇽</option
+                              ><option value="albania">Albania 🇦🇱</option
+                              ><option value="algeria">Algeria 🇩🇿</option
+                              ><option value="american-samoa">American Samoa 🇦🇸</option
+                              ><option value="andorra">Andorra 🇦🇩</option
+                              ><option value="angola">Angola 🇦🇴</option
+                              ><option value="anguilla">Anguilla 🇦🇮</option
+                              ><option value="antarctica">Antarctica 🇦🇶</option
+                              ><option value="antigua-and-barbuda">Antigua and Barbuda 🇦🇬</option
+                              ><option value="argentina">Argentina 🇦🇷</option
+                              ><option value="armenia">Armenia 🇦🇲</option
+                              ><option value="aruba">Aruba 🇦🇼</option
+                              ><option value="australia">Australia 🇦🇺</option
+                              ><option value="austria">Austria 🇦🇹</option
+                              ><option value="azerbaijan">Azerbaijan 🇦🇿</option
+                              ><option value="bahamas">Bahamas 🇧🇸</option
+                              ><option value="bahrain">Bahrain 🇧🇭</option
+                              ><option value="bangladesh">Bangladesh 🇧🇩</option
+                              ><option value="barbados">Barbados 🇧🇧</option
+                              ><option value="belarus">Belarus 🇧🇾</option
+                              ><option value="belgium">Belgium 🇧🇪</option
+                              ><option value="belize">Belize 🇧🇿</option
+                              ><option value="benin">Benin 🇧🇯</option
+                              ><option value="bermuda">Bermuda 🇧🇲</option
+                              ><option value="bhutan">Bhutan 🇧🇹</option
+                              ><option value="bolivia">Bolivia 🇧🇴</option
+                              ><option value="bosnia-and-herzegovina"
+                                >Bosnia and Herzegovina 🇧🇦</option
+                              ><option value="botswana">Botswana 🇧🇼</option
+                              ><option value="bouvet-island">Bouvet Island 🇧🇻</option
+                              ><option value="brazil">Brazil 🇧🇷</option
+                              ><option value="british-indian-ocean-territory"
+                                >British Indian Ocean Territory 🇮🇴</option
+                              ><option value="brunei-darussalam">Brunei Darussalam 🇧🇳</option
+                              ><option value="bulgaria">Bulgaria 🇧🇬</option
+                              ><option value="burkina-faso">Burkina Faso 🇧🇫</option
+                              ><option value="burundi">Burundi 🇧🇮</option
+                              ><option value="cambodia">Cambodia 🇰🇭</option
+                              ><option value="cameroon">Cameroon 🇨🇲</option
+                              ><option value="canada">Canada 🇨🇦</option
+                              ><option value="cape-verde">Cape Verde 🇨🇻</option
+                              ><option value="cayman-islands">Cayman Islands 🇰🇾</option
+                              ><option value="central-african-republic"
+                                >Central African Republic 🇨🇫</option
+                              ><option value="chad">Chad 🇹🇩</option
+                              ><option value="chile">Chile 🇨🇱</option
+                              ><option value="china">China 🇨🇳</option
+                              ><option value="christmas-island">Christmas Island 🇨🇽</option
+                              ><option value="cocos-_keeling_-islands"
+                                >Cocos (Keeling) Islands 🇨🇨</option
+                              ><option value="colombia">Colombia 🇨🇴</option
+                              ><option value="comoros">Comoros 🇰🇲</option
+                              ><option value="congo">Congo 🇨🇬</option
+                              ><option value="cook-islands">Cook Islands 🇨🇰</option
+                              ><option value="costa-rica">Costa Rica 🇨🇷</option
+                              ><option value="croatia">Croatia 🇭🇷</option
+                              ><option value="cuba">Cuba 🇨🇺</option
+                              ><option value="curacao">Curacao 🇨🇼</option
+                              ><option value="cyprus">Cyprus 🇨🇾</option
+                              ><option value="czech-republic">Czech Republic 🇨🇿</option
+                              ><option value="democratic-republic-of-the-congo"
+                                >Democratic Republic of the Congo 🇨🇩</option
+                              ><option value="denmark">Denmark 🇩🇰</option
+                              ><option value="djibouti">Djibouti 🇩🇯</option
+                              ><option value="dominica">Dominica 🇩🇲</option
+                              ><option value="dominican-republic">Dominican Republic 🇩🇴</option
+                              ><option value="ecuador">Ecuador 🇪🇨</option
+                              ><option value="egypt">Egypt 🇪🇬</option
+                              ><option value="el-salvador">El Salvador 🇸🇻</option
+                              ><option value="equatorial-guinea">Equatorial Guinea 🇬🇶</option
+                              ><option value="eritrea">Eritrea 🇪🇷</option
+                              ><option value="estonia">Estonia 🇪🇪</option
+                              ><option value="ethiopia">Ethiopia 🇪🇹</option
+                              ><option value="eurozone">Eurozone 🇪🇺</option
+                              ><option value="falkland-islands-_malvinas_"
+                                >Falkland Islands (Malvinas) 🇫🇰</option
+                              ><option value="faroe-islands">Faroe Islands 🇫🇴</option
+                              ><option value="fiji">Fiji 🇫🇯</option
+                              ><option value="finland">Finland 🇫🇮</option
+                              ><option value="france">France 🇫🇷</option
+                              ><option value="french-guiana">French Guiana 🇬🇫</option
+                              ><option value="french-polynesia">French Polynesia 🇵🇫</option
+                              ><option value="french-southern-territories"
+                                >French Southern Territories 🇹🇫</option
+                              ><option value="gabon">Gabon 🇬🇦</option
+                              ><option value="gambia">Gambia 🇬🇲</option
+                              ><option value="georgia">Georgia 🇬🇪</option
+                              ><option value="germany">Germany 🇩🇪</option
+                              ><option value="ghana">Ghana 🇬🇭</option
+                              ><option value="gibraltar">Gibraltar 🇬🇮</option
+                              ><option value="greece">Greece 🇬🇷</option
+                              ><option value="greenland">Greenland 🇬🇱</option
+                              ><option value="grenada">Grenada 🇬🇩</option
+                              ><option value="guadeloupe">Guadeloupe 🇬🇵</option
+                              ><option value="guam">Guam 🇬🇺</option
+                              ><option value="guatemala">Guatemala 🇬🇹</option
+                              ><option value="guernsey">Guernsey 🇬🇬</option
+                              ><option value="guinea">Guinea 🇬🇳</option
+                              ><option value="guinea-bissau">Guinea Bissau 🇬🇼</option
+                              ><option value="guyana">Guyana 🇬🇾</option
+                              ><option value="haiti">Haiti 🇭🇹</option
+                              ><option value="heard-island-and-mcdonald-islands"
+                                >Heard Island and Mcdonald Islands 🇭🇲</option
+                              ><option value="honduras">Honduras 🇭🇳</option
+                              ><option value="hong-kong">Hong Kong 🇭🇰</option
+                              ><option value="hungary">Hungary 🇭🇺</option
+                              ><option value="iceland">Iceland 🇮🇸</option
+                              ><option value="india">India 🇮🇳</option
+                              ><option value="indonesia">Indonesia 🇮🇩</option
+                              ><option value="iran">Iran 🇮🇷</option
+                              ><option value="iraq">Iraq 🇮🇶</option
+                              ><option value="ireland">Ireland 🇮🇪</option
+                              ><option value="isle-of-man">Isle of Man 🇮🇲</option
+                              ><option value="israel">Israel 🇮🇱</option
+                              ><option value="italy">Italy 🇮🇹</option
+                              ><option value="ivory-coast">Ivory Coast 🇨🇮</option
+                              ><option value="jamaica">Jamaica 🇯🇲</option
+                              ><option value="japan">Japan 🇯🇵</option
+                              ><option value="jersey">Jersey 🇯🇪</option
+                              ><option value="jordan">Jordan 🇯🇴</option
+                              ><option value="kazakhstan">Kazakhstan 🇰🇿</option
+                              ><option value="kenya">Kenya 🇰🇪</option
+                              ><option value="kiribati">Kiribati 🇰🇮</option
+                              ><option value="kosovo">Kosovo 🇽🇰</option
+                              ><option value="kuwait">Kuwait 🇰🇼</option
+                              ><option value="kyrgyzstan">Kyrgyzstan 🇰🇬</option
+                              ><option value="laos">Laos 🇱🇦</option
+                              ><option value="latvia">Latvia 🇱🇻</option
+                              ><option value="lebanon">Lebanon 🇱🇧</option
+                              ><option value="lesotho">Lesotho 🇱🇸</option
+                              ><option value="liberia">Liberia 🇱🇷</option
+                              ><option value="libyan-arab-jamahiriya"
+                                >Libyan Arab Jamahiriya 🇱🇾</option
+                              ><option value="liechtenstein">Liechtenstein 🇱🇮</option
+                              ><option value="lithuania">Lithuania 🇱🇹</option
+                              ><option value="luxembourg">Luxembourg 🇱🇺</option
+                              ><option value="macao">Macao 🇲🇴</option
+                              ><option value="macedonia">Macedonia 🇲🇰</option
+                              ><option value="madagascar">Madagascar 🇲🇬</option
+                              ><option value="malawi">Malawi 🇲🇼</option
+                              ><option value="malaysia">Malaysia 🇲🇾</option
+                              ><option value="maldives">Maldives 🇲🇻</option
+                              ><option value="mali">Mali 🇲🇱</option
+                              ><option value="malta">Malta 🇲🇹</option
+                              ><option value="marshall-islands">Marshall Islands 🇲🇭</option
+                              ><option value="martinique">Martinique 🇲🇶</option
+                              ><option value="mauritania">Mauritania 🇲🇷</option
+                              ><option value="mauritius">Mauritius 🇲🇺</option
+                              ><option value="mayotte">Mayotte 🇾🇹</option
+                              ><option value="mexico">Mexico 🇲🇽</option
+                              ><option value="micronesia">Micronesia 🇫🇲</option
+                              ><option value="moldova">Moldova 🇲🇩</option
+                              ><option value="monaco">Monaco 🇲🇨</option
+                              ><option value="mongolia">Mongolia 🇲🇳</option
+                              ><option value="montenegro">Montenegro 🇲🇪</option
+                              ><option value="montserrat">Montserrat 🇲🇸</option
+                              ><option value="morocco">Morocco 🇲🇦</option
+                              ><option value="mozambique">Mozambique 🇲🇿</option
+                              ><option value="myanmar">Myanmar 🇲🇲</option
+                              ><option value="namibia">Namibia 🇳🇦</option
+                              ><option value="nauru">Nauru 🇳🇷</option
+                              ><option value="nepal">Nepal 🇳🇵</option
+                              ><option value="netherlands">Netherlands 🇳🇱</option
+                              ><option value="netherlands-antilles">Netherlands Antilles 🇳🇱</option
+                              ><option value="new-caledonia">New Caledonia 🇳🇨</option
+                              ><option value="new-zealand">New Zealand 🇳🇿</option
+                              ><option value="nicaragua">Nicaragua 🇳🇮</option
+                              ><option value="niger">Niger 🇳🇪</option
+                              ><option value="nigeria">Nigeria 🇳🇬</option
+                              ><option value="niue">Niue 🇳🇺</option
+                              ><option value="norfolk-island">Norfolk Island 🇳🇫</option
+                              ><option value="north-korea">North Korea 🇰🇵</option
+                              ><option value="northern-mariana-islands"
+                                >Northern Mariana Islands 🇲🇵</option
+                              ><option value="norway">Norway 🇳🇴</option
+                              ><option value="oman">Oman 🇴🇲</option
+                              ><option value="pakistan">Pakistan 🇵🇰</option
+                              ><option value="palau">Palau 🇵🇼</option
+                              ><option value="palestine">Palestine 🇵🇸</option
+                              ><option value="panama">Panama 🇵🇦</option
+                              ><option value="papua-new-guinea">Papua New Guinea 🇵🇬</option
+                              ><option value="paraguay">Paraguay 🇵🇾</option
+                              ><option value="peru">Peru 🇵🇪</option
+                              ><option value="philippines">Philippines 🇵🇭</option
+                              ><option value="pitcairn">Pitcairn 🇵🇳</option
+                              ><option value="poland">Poland 🇵🇱</option
+                              ><option value="portugal">Portugal 🇵🇹</option
+                              ><option value="puerto-rico">Puerto Rico 🇵🇷</option
+                              ><option value="qatar">Qatar 🇶🇦</option
+                              ><option value="reunion">Reunion 🇷🇪</option
+                              ><option value="romania">Romania 🇷🇴</option
+                              ><option value="russia">Russia 🇷🇺</option
+                              ><option value="rwanda">Rwanda 🇷🇼</option
+                              ><option value="saint-helena">Saint Helena 🇸🇭</option
+                              ><option value="saint-pierre-and-miquelon"
+                                >Saint Pierre and Miquelon 🇵🇲</option
+                              ><option value="samoa">Samoa 🇼🇸</option
+                              ><option value="san-marino">San Marino 🇸🇲</option
+                              ><option value="sao-tome-and-principe"
+                                >Sao Tome and Principe 🇸🇹</option
+                              ><option value="saudi-arabia">Saudi Arabia 🇸🇦</option
+                              ><option value="senegal">Senegal 🇸🇳</option
+                              ><option value="serbia">Serbia 🇷🇸</option
+                              ><option value="seychelles">Seychelles 🇸🇨</option
+                              ><option value="sierra-leone">Sierra Leone 🇸🇱</option
+                              ><option value="singapore">Singapore 🇸🇬</option
+                              ><option value="slovakia">Slovakia 🇸🇰</option
+                              ><option value="slovenia">Slovenia 🇸🇮</option
+                              ><option value="solomon-islands">Solomon Islands 🇸🇧</option
+                              ><option value="somalia">Somalia 🇸🇴</option
+                              ><option value="south-africa">South Africa 🇿🇦</option
+                              ><option value="south-georgia-and-the-south-sandwich-islands"
+                                >South Georgia and the South Sandwich Islands 🇬🇸</option
+                              ><option value="south-korea">South Korea 🇰🇷</option
+                              ><option value="spain">Spain 🇪🇸</option
+                              ><option value="sri-lanka">Sri Lanka 🇱🇰</option
+                              ><option value="st-kitts-and-nevis">St Kitts and Nevis 🇰🇳</option
+                              ><option value="st-lucia">St Lucia 🇱🇨</option
+                              ><option value="st-vincent-and-grenadines"
+                                >St Vincent and Grenadines 🇻🇨</option
+                              ><option value="sudan">Sudan 🇸🇩</option
+                              ><option value="suriname">Suriname 🇸🇷</option
+                              ><option value="svalbard-and-jan-mayen"
+                                >Svalbard and Jan Mayen 🇸🇯</option
+                              ><option value="swaziland">Swaziland 🇸🇿</option
+                              ><option value="sweden">Sweden 🇸🇪</option
+                              ><option value="switzerland">Switzerland 🇨🇭</option
+                              ><option value="syria">Syria 🇸🇾</option
+                              ><option value="taiwan">Taiwan 🇹🇼</option
+                              ><option value="tajikistan">Tajikistan 🇹🇯</option
+                              ><option value="tanzania">Tanzania 🇹🇿</option
+                              ><option value="thailand">Thailand 🇹🇭</option
+                              ><option value="timor-leste">Timor Leste 🇹🇱</option
+                              ><option value="togo">Togo 🇹🇬</option
+                              ><option value="tokelau">Tokelau 🇹🇰</option
+                              ><option value="tonga">Tonga 🇹🇴</option
+                              ><option value="trinidad-and-tobago">Trinidad and Tobago 🇹🇹</option
+                              ><option value="tunisia">Tunisia 🇹🇳</option
+                              ><option value="turkey">Turkey 🇹🇷</option
+                              ><option value="turkmenistan">Turkmenistan 🇹🇲</option
+                              ><option value="turks-and-caicos">Turks and Caicos 🇹🇨</option
+                              ><option value="tuvalu">Tuvalu 🇹🇻</option
+                              ><option value="uganda">Uganda 🇺🇬</option
+                              ><option value="ukraine">Ukraine 🇺🇦</option
+                              ><option value="united-arab-emirates">United Arab Emirates 🇦🇪</option
+                              ><option value="united-kingdom">United Kingdom 🇬🇧</option
+                              ><option value="uruguay">Uruguay 🇺🇾</option
+                              ><option value="usa">USA 🇺🇸</option
+                              ><option value="uzbekistan">Uzbekistan 🇺🇿</option
+                              ><option value="vanuatu">Vanuatu 🇻🇺</option
+                              ><option value="vatican-city">Vatican City 🇻🇦</option
+                              ><option value="venezuela">Venezuela 🇻🇪</option
+                              ><option value="vietnam">Vietnam 🇻🇳</option
+                              ><option value="virgin-islands">Virgin Islands 🇻🇬</option
+                              ><option value="virgin-islands-us">Virgin Islands US 🇻🇮</option
+                              ><option value="wallis-and-futuna">Wallis and Futuna 🇼🇫</option
+                              ><option value="western-sahara">Western Sahara 🇪🇭</option
+                              ><option value="yemen">Yemen 🇾🇪</option
+                              ><option value="zambia">Zambia 🇿🇲</option
+                              ><option value="zimbabwe">Zimbabwe 🇿🇼</option>
+                            </select>
+                          </div>
+                        </div>
+                        <button type="submit" class="header_search_button trans_300" value="Submit">
+                          <img src="images/search.png" alt="" />
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Wishlist -->
+              <div class="col-lg-4 col-9 order-lg-3 order-2 text-lg-left text-right">
+                <div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
+                  <div class="wishlist d-flex flex-row align-items-center justify-content-end">
+                    <div class="wishlist_icon"><img src="images/heart.png" alt="" /></div>
+                    <div class="wishlist_content">
+                      <div class="wishlist_text"><a href="#">Wishlist</a></div>
+                      <div class="wishlist_count">115</div>
+                    </div>
+                  </div>
+
+                  <!-- Cart -->
+                  <div class="cart">
+                    <div
+                      class="cart_container d-flex flex-row align-items-center justify-content-end"
+                    >
+                      <div class="cart_icon">
+                        <img src="images/cart.png" alt="" />
+                        <div class="cart_count"><span>10</span></div>
+                      </div>
+                      <div class="cart_content">
+                        <div class="cart_text"><a href="cart.html">Cart</a></div>
+                        <div class="cart_price">$85</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="banner">
+        <div
+          class="banner_background"
+          style="background-image:url(images/banner_background.jpg)"
+        ></div>
+        <div class="container fill_height">
+          <div class="row fill_height">
+            <div class="banner_product_image"><img src="images/banner_product.png" alt="" /></div>
+            <div class="col-lg-5 offset-lg-4 fill_height">
+              <div class="banner_content">
+                <h1 class="banner_text">new era of smartphones</h1>
+                <div class="banner_price"><span>$530</span>$460</div>
+                <div class="banner_product_name">Apple Iphone 6s</div>
+                <div class="button banner_button"><a href="#">Shop Now</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	
+      <!-- Characteristics -->
+
+      <div class="characteristics">
+        <div class="container">
+          <div class="row">
+            <!-- Char. Item -->
+            <div class="col-lg-3 col-md-6 char_col">
+              <div class="char_item d-flex flex-row align-items-center justify-content-start">
+                <div class="char_icon"><img src="images/char_1.png" alt="" /></div>
+                <div class="char_content">
+                  <div class="char_title">Free Delivery</div>
+                  <div class="char_subtitle">from $50</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Char. Item -->
+            <div class="col-lg-3 col-md-6 char_col">
+              <div class="char_item d-flex flex-row align-items-center justify-content-start">
+                <div class="char_icon"><img src="images/char_2.png" alt="" /></div>
+                <div class="char_content">
+                  <div class="char_title">Free Delivery</div>
+                  <div class="char_subtitle">from $50</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Char. Item -->
+            <div class="col-lg-3 col-md-6 char_col">
+              <div class="char_item d-flex flex-row align-items-center justify-content-start">
+                <div class="char_icon"><img src="images/char_3.png" alt="" /></div>
+                <div class="char_content">
+                  <div class="char_title">Free Delivery</div>
+                  <div class="char_subtitle">from $50</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Char. Item -->
+            <div class="col-lg-3 col-md-6 char_col">
+              <div class="char_item d-flex flex-row align-items-center justify-content-start">
+                <div class="char_icon"><img src="images/char_4.png" alt="" /></div>
+                <div class="char_content">
+                  <div class="char_title">Free Delivery</div>
+                  <div class="char_subtitle">from $50</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Deals of the week -->
+
+	  <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Trending <b>Products</b></h2>
+                <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
+               
+                <div class="carousel-inner">
+                    <div class="item carousel-item active">
+						
+                        <div class="row" id="Products">
+                            <div class="col-sm-3">
+							</div>
+							
+                </div>
+             
+            </div>
+            </div>
+        </div>  
+        </div>
+		</div>	
+		<br><br><br>
+		<br><br><br>
+
+      <!-- Popular Categories -->
+
+      <!-- Footer -->
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 footer_col">
+              <div class="footer_column footer_contact">
+                <div class="logo_container">
+                  <div class="logo"><a href="#">Xcel Services</a></div>
+                </div>
+                <div class="footer_title">Got Question? Call Us 24/7</div>
+                <div class="footer_phone">+38 068 005 3570</div>
+                <div class="footer_contact_text">
+                  <p>17 Princess Road, London</p>
+                  <p>Grester London NW18JR, UK</p>
+                </div>
+                <div class="footer_social">
+                  <ul>
+                    <li>
+                      <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fab fa-youtube"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fab fa-google"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fab fa-vimeo-v"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-2 offset-lg-2">
+              <div class="footer_column">
+                <div class="footer_title">Find it Fast</div>
+                <ul class="footer_list">
+                  <li><a href="#">Computers & Laptops</a></li>
+                  <li><a href="#">Cameras & Photos</a></li>
+                  <li><a href="#">Hardware</a></li>
+                  <li><a href="#">Smartphones & Tablets</a></li>
+                  <li><a href="#">TV & Audio</a></li>
+                </ul>
+                <div class="footer_subtitle">Gadgets</div>
+                <ul class="footer_list">
+                  <li><a href="#">Car Electronics</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-2">
+              <div class="footer_column">
+                <ul class="footer_list footer_list_2">
+                  <li><a href="#">Video Games & Consoles</a></li>
+                  <li><a href="#">Accessories</a></li>
+                  <li><a href="#">Cameras & Photos</a></li>
+                  <li><a href="#">Hardware</a></li>
+                  <li><a href="#">Computers & Laptops</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-2">
+              <div class="footer_column">
+                <div class="footer_title">Customer Care</div>
+                <ul class="footer_list">
+                  <li><a href="#">My Account</a></li>
+                  <li><a href="#">Order Tracking</a></li>
+                  <li><a href="#">Wish List</a></li>
+                  <li><a href="#">Customer Services</a></li>
+                  <li><a href="#">Returns / Exchange</a></li>
+                  <li><a href="#">FAQs</a></li>
+                  <li><a href="#">Product Support</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <!-- Copyright -->
+
+      <div class="copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div
+                class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start"
+              >
+                <div class="copyright_content">
+                  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                  Copyright &copy;
+                  <script>
+                    document.write(new Date().getFullYear());
+                  </script>
+                  All rights reserved | This template is made with
+                  <i class="fa fa-heart" aria-hidden="true"></i> by
+                  <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                </div>
+                <div class="logos ml-sm-auto">
+                  <ul class="logos_list">
+                    <li>
+                      <a href="#"><img src="images/logos_1.png" alt=""/></a>
+                    </li>
+                    <li>
+                      <a href="#"><img src="images/logos_2.png" alt=""/></a>
+                    </li>
+                    <li>
+                      <a href="#"><img src="images/logos_3.png" alt=""/></a>
+                    </li>
+                    <li>
+                      <a href="#"><img src="images/logos_4.png" alt=""/></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="styles/bootstrap4/popper.js"></script>
+    <script src="styles/bootstrap4/bootstrap.min.js"></script>
+    <script src="plugins/greensock/TweenMax.min.js"></script>
+    <script src="plugins/greensock/TimelineMax.min.js"></script>
+    <script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
+    <script src="plugins/greensock/animation.gsap.min.js"></script>
+    <script src="plugins/greensock/ScrollToPlugin.min.js"></script>
+    <script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+    <script src="plugins/slick-1.8.0/slick.js"></script>
+    <script src="plugins/easing/easing.js"></script>
+    <script src="js/custom.js"></script>
+  </body>
+</html>

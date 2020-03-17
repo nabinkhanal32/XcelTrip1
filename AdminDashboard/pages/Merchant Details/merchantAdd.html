@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>XcelService Admin</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="../../vendors/mdi/css/materialdesignicons.min.css" />
+    <link rel="stylesheet" href="../../vendors/base/vendor.bundle.base.css" />
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <link rel="stylesheet" href="../../vendors/datatables.net-bs4/dataTables.bootstrap4.css" />
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="../../css/style.css" />
+    <!-- endinject -->
+  </head>
+  <body>
+    <div class="container-scroller">
+      <!-- partial:partials/_navbar.html -->
+      <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+        <div class="navbar-brand-wrapper d-flex justify-content-center">
+          <div
+            class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100"
+          >
+            <a class="navbar-brand brand-logo" href="../../index.html"
+              ><img src="../../images/logo.png" alt="logo"
+            /></a>
+
+            <button
+              class="navbar-toggler navbar-toggler align-self-center"
+              type="button"
+              data-toggle="minimize"
+            >
+              <span class="mdi mdi-sort-variant"></span>
+            </button>
+          </div>
+        </div>
+
+          <button
+            class="navbar-toggler navbar-toggler-right d-lg-none align-self-center"
+            type="button"
+            data-toggle="offcanvas"
+          >
+            <span class="mdi mdi-menu"></span>
+          </button>
+        </div>
+      </nav>
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial:partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="../../index.html">
+                <i class="mdi mdi-home menu-icon"></i>
+                <span class="menu-title">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="merchant.html">
+                <i class="mdi mdi-account-multiple"></i>
+                <span class="menu-title">Merchent Details</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../topup/topup.html">
+                <i class="mdi mdi-buffer
+                "></i>
+                <span class="menu-title">Topup Details</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../Product/addproduct.html">
+                <i class="mdi mdi-briefcase-upload"></i>
+                <span class="menu-title">Add Product</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../Product/product.html">
+                <i class="mdi mdi-view-module"></i>
+                <span class="menu-title">Product</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">
+                <i class="mdi mdi-logout"></i>
+                <span class="menu-title">Logout</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- partial -->
+        <div class="main-panel">
+          <div class="content-wrapper">
+            <div class="row">
+              <div class="col-md-12 grid-margin">
+                <div class="d-flex justify-content-between flex-wrap">
+                  <div class="d-flex align-items-end flex-wrap">
+                    <div class="mr-md-3 mr-xl-5">
+                      <h2>Welcome back,</h2>
+                      <p class="mb-md-0">Your analytics dashboard template.</p>
+                    </div>
+                    <div class="d-flex">
+                      <i class="mdi mdi-home text-muted hover-cursor"></i>
+                      <p class="text-muted mb-0 hover-cursor">
+                        &nbsp;/&nbsp;Dashboard&nbsp;/&nbsp;
+                      </p>
+                      <p class="text-primary mb-0 hover-cursor">Analytics</p>
+                    </div>
+                  </div>
+               
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body dashboard-tabs p-0">
+                    <ul class="nav nav-tabs px-4" role="tablist">
+                      <li class="nav-item">
+                        <a
+                          class="nav-link active"
+                          id="overview-tab"
+                          data-toggle="tab"
+                          href="#overview"
+                          role="tab"
+                          aria-controls="overview"
+                          aria-selected="true"
+                          >Overview</a
+                        >
+                      </li>
+                          
+                      </li>
+                    </ul>
+                  
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="main-panel">        
+                <div class="content-wrapper">
+                 
+                          <h4 class="card-title">Merchant Add</h4>
+                          
+                          <form enctype="multipart/form-data" id="imageUploadForm" class="forms-sample">
+                          <div class="form-group">
+                            <span class="label" id="image_display"></span>
+                            <input type="file" name="imageFile" id="verification_image" readonly />
+                        </div>  
+                        </form>
+
+                          <form class="company">
+                            <div class="form-group">
+                              <label for="exampleInputUsername1">Company Name</label>
+                              <input type="text" class="form-control" id="company_name" placeholder="Company Name">
+                            </div>
+                            <div class="form-group">
+                              <label>Address</label>
+                              <input type="text" class="form-control" id="address" placeholder="Address">
+                            </div>
+                            <div class="form-group">
+                              <label>Contact Person</label>
+                              <input type="text" class="form-control" id="contact_person" placeholder="Contact Person">
+
+                            </div>
+                            <div class="form-group">
+                                <label>Contact phone</label>
+                                <input type="text" class="form-control" id="contact_phone" placeholder="Company phone">
+                                                          </div>
+                            <div class="form-group">
+                                <label>Company Email</label>
+                                <input type="text" class="form-control" id="company_email" placeholder="Company Email">
+                                                          </div>
+                            <div class="form-group">
+                                <label>Contact Email</label>
+                                <input type="text" class="form-control" id="contact_email" placeholder="Contact Email">
+                                
+                              </div>
+                            <div class="form-group">
+                              <label >PAN</label>
+                              <input type="number" class="form-control" id="pan" placeholder="Pan Number">
+                            </div>
+                            <div class="form-group">
+                              <Label>Select your Country</Label>
+                              <br>
+                            <select id="country_name"
+                            ><optgroup
+                              ><option value="international">International 🌐</option><option value="afghanistan">Afghanistan 🇦🇫</option
+                              ><option value="aland-islands">Aland Islands 🇦🇽</option
+                              ><option value="albania">Albania 🇦🇱</option><option value="algeria">Algeria 🇩🇿</option
+                              ><option value="american-samoa">American Samoa 🇦🇸</option
+                              ><option value="andorra">Andorra 🇦🇩</option><option value="angola">Angola 🇦🇴</option
+                              ><option value="anguilla">Anguilla 🇦🇮</option><option value="antarctica">Antarctica 🇦🇶</option
+                              ><option value="antigua-and-barbuda">Antigua and Barbuda 🇦🇬</option
+                              ><option value="argentina">Argentina 🇦🇷</option><option value="armenia">Armenia 🇦🇲</option
+                              ><option value="aruba">Aruba 🇦🇼</option><option value="australia">Australia 🇦🇺</option
+                              ><option value="austria">Austria 🇦🇹</option><option value="azerbaijan">Azerbaijan 🇦🇿</option
+                              ><option value="bahamas">Bahamas 🇧🇸</option><option value="bahrain">Bahrain 🇧🇭</option
+                              ><option value="bangladesh">Bangladesh 🇧🇩</option><option value="barbados">Barbados 🇧🇧</option
+                              ><option value="belarus">Belarus 🇧🇾</option><option value="belgium">Belgium 🇧🇪</option
+                              ><option value="belize">Belize 🇧🇿</option><option value="benin">Benin 🇧🇯</option
+                              ><option value="bermuda">Bermuda 🇧🇲</option><option value="bhutan">Bhutan 🇧🇹</option
+                              ><option value="bolivia">Bolivia 🇧🇴</option
+                              ><option value="bosnia-and-herzegovina">Bosnia and Herzegovina 🇧🇦</option
+                              ><option value="botswana">Botswana 🇧🇼</option
+                              ><option value="bouvet-island">Bouvet Island 🇧🇻</option><option value="brazil">Brazil 🇧🇷</option
+                              ><option value="british-indian-ocean-territory">British Indian Ocean Territory 🇮🇴</option
+                              ><option value="brunei-darussalam">Brunei Darussalam 🇧🇳</option
+                              ><option value="bulgaria">Bulgaria 🇧🇬</option
+                              ><option value="burkina-faso">Burkina Faso 🇧🇫</option><option value="burundi">Burundi 🇧🇮</option
+                              ><option value="cambodia">Cambodia 🇰🇭</option><option value="cameroon">Cameroon 🇨🇲</option
+                              ><option value="canada">Canada 🇨🇦</option><option value="cape-verde">Cape Verde 🇨🇻</option
+                              ><option value="cayman-islands">Cayman Islands 🇰🇾</option
+                              ><option value="central-african-republic">Central African Republic 🇨🇫</option
+                              ><option value="chad">Chad 🇹🇩</option><option value="chile">Chile 🇨🇱</option
+                              ><option value="china">China 🇨🇳</option
+                              ><option value="christmas-island">Christmas Island 🇨🇽</option
+                              ><option value="cocos-_keeling_-islands">Cocos (Keeling) Islands 🇨🇨</option
+                              ><option value="colombia">Colombia 🇨🇴</option><option value="comoros">Comoros 🇰🇲</option
+                              ><option value="congo">Congo 🇨🇬</option><option value="cook-islands">Cook Islands 🇨🇰</option
+                              ><option value="costa-rica">Costa Rica 🇨🇷</option><option value="croatia">Croatia 🇭🇷</option
+                              ><option value="cuba">Cuba 🇨🇺</option><option value="curacao">Curacao 🇨🇼</option
+                              ><option value="cyprus">Cyprus 🇨🇾</option
+                              ><option value="czech-republic">Czech Republic 🇨🇿</option
+                              ><option value="democratic-republic-of-the-congo">Democratic Republic of the Congo 🇨🇩</option
+                              ><option value="denmark">Denmark 🇩🇰</option><option value="djibouti">Djibouti 🇩🇯</option
+                              ><option value="dominica">Dominica 🇩🇲</option
+                              ><option value="dominican-republic">Dominican Republic 🇩🇴</option
+                              ><option value="ecuador">Ecuador 🇪🇨</option><option value="egypt">Egypt 🇪🇬</option
+                              ><option value="el-salvador">El Salvador 🇸🇻</option
+                              ><option value="equatorial-guinea">Equatorial Guinea 🇬🇶</option
+                              ><option value="eritrea">Eritrea 🇪🇷</option><option value="estonia">Estonia 🇪🇪</option
+                              ><option value="ethiopia">Ethiopia 🇪🇹</option><option value="eurozone">Eurozone 🇪🇺</option
+                              ><option value="falkland-islands-_malvinas_">Falkland Islands (Malvinas) 🇫🇰</option
+                              ><option value="faroe-islands">Faroe Islands 🇫🇴</option><option value="fiji">Fiji 🇫🇯</option
+                              ><option value="finland">Finland 🇫🇮</option><option value="france">France 🇫🇷</option
+                              ><option value="french-guiana">French Guiana 🇬🇫</option
+                              ><option value="french-polynesia">French Polynesia 🇵🇫</option
+                              ><option value="french-southern-territories">French Southern Territories 🇹🇫</option
+                              ><option value="gabon">Gabon 🇬🇦</option><option value="gambia">Gambia 🇬🇲</option
+                              ><option value="georgia">Georgia 🇬🇪</option><option value="germany">Germany 🇩🇪</option
+                              ><option value="ghana">Ghana 🇬🇭</option><option value="gibraltar">Gibraltar 🇬🇮</option
+                              ><option value="greece">Greece 🇬🇷</option><option value="greenland">Greenland 🇬🇱</option
+                              ><option value="grenada">Grenada 🇬🇩</option><option value="guadeloupe">Guadeloupe 🇬🇵</option
+                              ><option value="guam">Guam 🇬🇺</option><option value="guatemala">Guatemala 🇬🇹</option
+                              ><option value="guernsey">Guernsey 🇬🇬</option><option value="guinea">Guinea 🇬🇳</option
+                              ><option value="guinea-bissau">Guinea Bissau 🇬🇼</option><option value="guyana">Guyana 🇬🇾</option
+                              ><option value="haiti">Haiti 🇭🇹</option
+                              ><option value="heard-island-and-mcdonald-islands">Heard Island and Mcdonald Islands 🇭🇲</option
+                              ><option value="honduras">Honduras 🇭🇳</option><option value="hong-kong">Hong Kong 🇭🇰</option
+                              ><option value="hungary">Hungary 🇭🇺</option><option value="iceland">Iceland 🇮🇸</option
+                              ><option value="india">India 🇮🇳</option><option value="indonesia">Indonesia 🇮🇩</option
+                              ><option value="iran">Iran 🇮🇷</option
+                              ><option value="iraq">Iraq 🇮🇶</option><option value="ireland">Ireland 🇮🇪</option
+                              ><option value="isle-of-man">Isle of Man 🇮🇲</option><option value="israel">Israel 🇮🇱</option
+                              ><option value="italy">Italy 🇮🇹</option><option value="ivory-coast">Ivory Coast 🇨🇮</option
+                              ><option value="jamaica">Jamaica 🇯🇲</option><option value="japan">Japan 🇯🇵</option
+                              ><option value="jersey">Jersey 🇯🇪</option><option value="jordan">Jordan 🇯🇴</option
+                              ><option value="kazakhstan">Kazakhstan 🇰🇿</option><option value="kenya">Kenya 🇰🇪</option
+                              ><option value="kiribati">Kiribati 🇰🇮</option><option value="kosovo">Kosovo 🇽🇰</option
+                              ><option value="kuwait">Kuwait 🇰🇼</option><option value="kyrgyzstan">Kyrgyzstan 🇰🇬</option
+                              ><option value="laos">Laos 🇱🇦</option><option value="latvia">Latvia 🇱🇻</option
+                              ><option value="lebanon">Lebanon 🇱🇧</option><option value="lesotho">Lesotho 🇱🇸</option
+                              ><option value="liberia">Liberia 🇱🇷</option
+                              ><option value="libyan-arab-jamahiriya">Libyan Arab Jamahiriya 🇱🇾</option
+                              ><option value="liechtenstein">Liechtenstein 🇱🇮</option
+                              ><option value="lithuania">Lithuania 🇱🇹</option><option value="luxembourg">Luxembourg 🇱🇺</option
+                              ><option value="macao">Macao 🇲🇴</option><option value="macedonia">Macedonia 🇲🇰</option
+                              ><option value="madagascar">Madagascar 🇲🇬</option><option value="malawi">Malawi 🇲🇼</option
+                              ><option value="malaysia">Malaysia 🇲🇾</option><option value="maldives">Maldives 🇲🇻</option
+                              ><option value="mali">Mali 🇲🇱</option><option value="malta">Malta 🇲🇹</option
+                              ><option value="marshall-islands">Marshall Islands 🇲🇭</option
+                              ><option value="martinique">Martinique 🇲🇶</option
+                              ><option value="mauritania">Mauritania 🇲🇷</option><option value="mauritius">Mauritius 🇲🇺</option
+                              ><option value="mayotte">Mayotte 🇾🇹</option><option value="mexico">Mexico 🇲🇽</option
+                              ><option value="micronesia">Micronesia 🇫🇲</option><option value="moldova">Moldova 🇲🇩</option
+                              ><option value="monaco">Monaco 🇲🇨</option><option value="mongolia">Mongolia 🇲🇳</option
+                              ><option value="montenegro">Montenegro 🇲🇪</option
+                              ><option value="montserrat">Montserrat 🇲🇸</option><option value="morocco">Morocco 🇲🇦</option
+                              ><option value="mozambique">Mozambique 🇲🇿</option><option value="myanmar">Myanmar 🇲🇲</option
+                              ><option value="namibia">Namibia 🇳🇦</option><option value="nauru">Nauru 🇳🇷</option
+                              ><option value="nepal">Nepal 🇳🇵</option><option value="netherlands">Netherlands 🇳🇱</option
+                              ><option value="netherlands-antilles">Netherlands Antilles 🇳🇱</option
+                              ><option value="new-caledonia">New Caledonia 🇳🇨</option
+                              ><option value="new-zealand">New Zealand 🇳🇿</option
+                              ><option value="nicaragua">Nicaragua 🇳🇮</option><option value="niger">Niger 🇳🇪</option
+                              ><option value="nigeria">Nigeria 🇳🇬</option><option value="niue">Niue 🇳🇺</option
+                              ><option value="norfolk-island">Norfolk Island 🇳🇫</option
+                              ><option value="north-korea">North Korea 🇰🇵</option
+                              ><option value="northern-mariana-islands">Northern Mariana Islands 🇲🇵</option
+                              ><option value="norway">Norway 🇳🇴</option><option value="oman">Oman 🇴🇲</option
+                              ><option value="pakistan">Pakistan 🇵🇰</option><option value="palau">Palau 🇵🇼</option
+                              ><option value="palestine">Palestine 🇵🇸</option><option value="panama">Panama 🇵🇦</option
+                              ><option value="papua-new-guinea">Papua New Guinea 🇵🇬</option
+                              ><option value="paraguay">Paraguay 🇵🇾</option><option value="peru">Peru 🇵🇪</option
+                              ><option value="philippines">Philippines 🇵🇭</option><option value="pitcairn">Pitcairn 🇵🇳</option
+                              ><option value="poland">Poland 🇵🇱</option><option value="portugal">Portugal 🇵🇹</option
+                              ><option value="puerto-rico">Puerto Rico 🇵🇷</option><option value="qatar">Qatar 🇶🇦</option
+                              ><option value="reunion">Reunion 🇷🇪</option><option value="romania">Romania 🇷🇴</option
+                              ><option value="russia">Russia 🇷🇺</option><option value="rwanda">Rwanda 🇷🇼</option
+                              ><option value="saint-helena">Saint Helena 🇸🇭</option
+                              ><option value="saint-pierre-and-miquelon">Saint Pierre and Miquelon 🇵🇲</option
+                              ><option value="samoa">Samoa 🇼🇸</option><option value="san-marino">San Marino 🇸🇲</option
+                              ><option value="sao-tome-and-principe">Sao Tome and Principe 🇸🇹</option
+                              ><option value="saudi-arabia">Saudi Arabia 🇸🇦</option><option value="senegal">Senegal 🇸🇳</option
+                              ><option value="serbia">Serbia 🇷🇸</option><option value="seychelles">Seychelles 🇸🇨</option
+                              ><option value="sierra-leone">Sierra Leone 🇸🇱</option
+                              ><option value="singapore">Singapore 🇸🇬</option><option value="slovakia">Slovakia 🇸🇰</option
+                              ><option value="slovenia">Slovenia 🇸🇮</option
+                              ><option value="solomon-islands">Solomon Islands 🇸🇧</option
+                              ><option value="somalia">Somalia 🇸🇴</option><option value="south-africa">South Africa 🇿🇦</option
+                              ><option value="south-georgia-and-the-south-sandwich-islands"
+                                >South Georgia and the South Sandwich Islands 🇬🇸</option
+                              ><option value="south-korea">South Korea 🇰🇷</option><option value="spain">Spain 🇪🇸</option
+                              ><option value="sri-lanka">Sri Lanka 🇱🇰</option
+                              ><option value="st-kitts-and-nevis">St Kitts and Nevis 🇰🇳</option
+                              ><option value="st-lucia">St Lucia 🇱🇨</option
+                              ><option value="st-vincent-and-grenadines">St Vincent and Grenadines 🇻🇨</option
+                              ><option value="sudan">Sudan 🇸🇩</option><option value="suriname">Suriname 🇸🇷</option
+                              ><option value="svalbard-and-jan-mayen">Svalbard and Jan Mayen 🇸🇯</option
+                              ><option value="swaziland">Swaziland 🇸🇿</option><option value="sweden">Sweden 🇸🇪</option
+                              ><option value="switzerland">Switzerland 🇨🇭</option><option value="syria">Syria 🇸🇾</option
+                              ><option value="taiwan">Taiwan 🇹🇼</option><option value="tajikistan">Tajikistan 🇹🇯</option
+                              ><option value="tanzania">Tanzania 🇹🇿</option><option value="thailand">Thailand 🇹🇭</option
+                              ><option value="timor-leste">Timor Leste 🇹🇱</option><option value="togo">Togo 🇹🇬</option
+                              ><option value="tokelau">Tokelau 🇹🇰</option><option value="tonga">Tonga 🇹🇴</option
+                              ><option value="trinidad-and-tobago">Trinidad and Tobago 🇹🇹</option
+                              ><option value="tunisia">Tunisia 🇹🇳</option><option value="turkey">Turkey 🇹🇷</option
+                              ><option value="turkmenistan">Turkmenistan 🇹🇲</option
+                              ><option value="turks-and-caicos">Turks and Caicos 🇹🇨</option
+                              ><option value="tuvalu">Tuvalu 🇹🇻</option><option value="uganda">Uganda 🇺🇬</option
+                              ><option value="ukraine">Ukraine 🇺🇦</option
+                              ><option value="united-arab-emirates">United Arab Emirates 🇦🇪</option
+                              ><option value="united-kingdom">United Kingdom 🇬🇧</option
+                              ><option value="uruguay">Uruguay 🇺🇾</option><option value="usa">USA 🇺🇸</option
+                              ><option value="uzbekistan">Uzbekistan 🇺🇿</option><option value="vanuatu">Vanuatu 🇻🇺</option
+                              ><option value="vatican-city">Vatican City 🇻🇦</option
+                              ><option value="venezuela">Venezuela 🇻🇪</option><option value="vietnam">Vietnam 🇻🇳</option
+                              ><option value="virgin-islands">Virgin Islands 🇻🇬</option
+                              ><option value="virgin-islands-us">Virgin Islands US 🇻🇮</option
+                              ><option value="wallis-and-futuna">Wallis and Futuna 🇼🇫</option
+                              ><option value="western-sahara">Western Sahara 🇪🇭</option><option value="yemen">Yemen 🇾🇪</option
+                              ><option value="zambia">Zambia 🇿🇲</option
+                              ><option value="zimbabwe">Zimbabwe 🇿🇼</option></optgroup
+                            ></select
+                          >
+                          </div>
+                            <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                            <button class="btn btn-light">Cancel</button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+            
+       
+       
+          <!-- content-wrapper ends -->
+          <!-- partial:partials/_footer.html -->
+         
+          <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+
+    <!-- plugins:js -->
+    <script src="../../vendors/base/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page-->
+    <script src="../../vendors/chart.js/Chart.min.js"></script>
+    <script src="../../vendors/datatables.net/jquery.dataTables.js"></script>
+    <script src="../../vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+    <script src="../../js/dashboard/dashboard.js"></script>
+    <script src="../../js/dashboard/off-canvas.js"></script>
+
+
+    <script src="../../js/url.js"></script>
+
+   <script src="../../js/addmerchantDetails.js"></script>
+    
+  </body>
+</html>
