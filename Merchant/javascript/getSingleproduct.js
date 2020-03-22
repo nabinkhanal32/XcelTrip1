@@ -29,10 +29,10 @@ window.onload = function() {
 								<div class="clearfix" style="z-index: 1000;">
 
 									<!-- Product Quantity -->
-									<div class="product_quantity clearfix">
-										<span>${element.quantity}</span>
+								
+									<input type="number" id="quantity" name="quantity" min="1" value="1" max="${element.quantity}" >
 										
-									</div>
+								
 
 									<!-- Product Color -->
 									
@@ -43,9 +43,9 @@ window.onload = function() {
 
 								<div class="product_price">$${element.price}</div>
 								<div class="button_container">
-									<a type="button" class="button cart_button" href=addtocart.html?id=${
+									<a type="button" class="button cart_button" id="button" onClick="addtocart('${
                     element._id
-                  }>Add to cart<i class="ps-icon-next"></i
+                  }')">Add to cart<i class="ps-icon-next"></i
                                     ></a>
 									<div class="product_fav"><i class="fas fa-heart"></i></div>
 								</div>

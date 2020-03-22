@@ -13,9 +13,8 @@ window.onload = function() {
         let detail = "";
         const url = baseurl + "uploads/";
         var totalCart = 0;
-        for (var item in data) {
-          totalCart += data[item].price * 1;
-
+        for (var item in res.carts) {
+          totalCart += res.carts[item].product_id.price * res.carts[item].product_quantity;
           // sessionStorage.setItem('shoppingCart-' + data[item]._id,data[item].price);
         }
         $("#totalPrice").html(totalCart);
@@ -33,21 +32,15 @@ window.onload = function() {
                 res.carts[index].product_id.price
               }</span></p>
               
-              <p class="item-price"> <span>Quantity : </span>
-              
-              <div class="form-group--number">
-              <input class="minus" type="submit" value="-" id="subtract_quantity" onclick="subtractQuantity('${
-                res.carts[index]._id
-              }','${res.carts[index].product_id.price}')">  
-            <input type="text" value="1" id="quantity-${
-              res.carts[index]._id
-            }" style="width:30px; font-weight:bold;color:red" readonly>
-              
-            <input class="plus" type="submit" value="+" id="add_quantity" onclick="addQuantity('${
-              res.carts[index]._id
-            }','${res.carts[index].product_id.quantity}','${res.carts[index].product_id.price}')">
-            </p>            
-            </div>
+            	
+										<p class="item-price"> <span>Quantity : </span>
+										
+						
+									<input type="text" value="${res.carts[index].product_quantity}" id="quantity-${
+            res.carts[index]._id
+          }" style="width:30px; font-weight:bold;color:red" readonly>
+									    
+								
               
               <p class="item-total"> <span>Item Total :Rs </span><span id="price-${
                 res.carts[index]._id
@@ -55,7 +48,7 @@ window.onload = function() {
             
             
         
-              <input type="submit" value="Remove" id="remove" onclick="remove('${
+              <input type="submit" value="Remove" class="btn btn-primary" id="remove" onclick="remove('${
                 res.carts[index]._id
               }')"> 
             
@@ -68,6 +61,7 @@ window.onload = function() {
         });
 
         document.getElementById("Addtocart").innerHTML = detail;
+        console.log(quantity);
       });
   } else {
     window.location.href = "login.html";

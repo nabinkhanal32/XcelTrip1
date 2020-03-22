@@ -20,7 +20,7 @@ window.onload = function() {
                   </figure>
                   <div class="product-text">
                       <h6>${element.product_name}</h6>
-                      <p>Country: ${element.country}</p>
+                      <p>Country: ${element.country}</p>  
                       <p>Quantity: ${element.quantity}</p>
                       <p>Details: ${element.details}</p>
                       

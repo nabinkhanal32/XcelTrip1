@@ -33,8 +33,10 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css" />
     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css" />
-    <script src="../../javascript/url.js"></script>
+
+    <script src="js/url.js"></script>
     <script src="js/getmerchantTopup.js"></script>
+    <script src="js/getProduct.js"></script>
   </head>
 
   <body class="is-preload">
@@ -60,7 +62,7 @@
               logout.addEventListener("click", function() {
                 localStorage.removeItem("company_id");
                 localStorage.removeItem("token_merchant");
-                window.location.href = "../../index.html";
+                window.location.href = "login.html";
               });
             </script></a
           >
@@ -78,6 +80,15 @@
 
     <!-- ------Table -->
     <div class="inner">
+      <!-- Latest Product Begin -->
+      <section class="latest-products spad">
+        <div class="container">
+          <div class="section-title">
+            <h2>My Product</h2>
+          </div>
+          <div class="row" id="productlist"></div>
+        </div>
+      </section>
       <!-- Latest Product End -->
       <h3 class="H3">Deposite History</h3>
       <table id="depositeHistory" class="table table-bordered table-responsive-lg">
